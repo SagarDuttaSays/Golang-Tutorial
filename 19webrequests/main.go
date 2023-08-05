@@ -1,26 +1,9 @@
 package main
 
-import (
-	"fmt"
-	"io/ioutil"
-	"net/http"
-)
+import "fmt"
 
-const url = "http://lco.dev"
+const url string = "https://portfolio-theta-ten.vercel.app/"
 
 func main() {
-	fmt.Println("Welcome to Web Requests in Golang")
-
-	response, err := http.Get(url)
-	if err != nil {
-		panic(err)
-	}
-	fmt.Printf("The response is of type:%T\n", response)
-	defer response.Body.Close()
-
-	databytes, err := ioutil.ReadAll(response.Body)
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(string(databytes))
+	fmt.Println("Welcome to Web Request Module")
 }
